@@ -1,11 +1,17 @@
 {
-  "name": "reactp",
+  "name": "product.xmonsters",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.8.2",
+    "@material-ui/icons": "^3.0.2",
+    "jquery": "^3.3.1",
+    "jquery.transit": "^0.9.12",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-list": "^0.8.11",
+    "react-scripts": "2.1.8",
+    "react-swipeable": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +27,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candyrobot/product.xmonsters.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/candyrobot/product.xmonsters/issues"
+  },
+  "homepage": "https://github.com/candyrobot/product.xmonsters#readme"
 }
