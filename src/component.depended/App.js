@@ -4,13 +4,13 @@ import './App.css';
 import GridListWithTitlebars from './GridListWithTitlebars';
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <GridListWithTitlebars />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<GridListWithTitlebars />
+			</div>
+		);
+	}
 }
 
 export default App;
