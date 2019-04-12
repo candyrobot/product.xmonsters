@@ -8,6 +8,47 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+
+
+    <!-- INFO: https://firebase.google.com/docs/web/setup -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC-sq4tcx8OM4sqFGxFhRjley4Lk_2HXAc",
+        authDomain: "x-monsters.firebaseapp.com",
+        databaseURL: "https://x-monsters.firebaseio.com",
+        projectId: "x-monsters",
+        storageBucket: "x-monsters.appspot.com",
+        messagingSenderId: "522942689753"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script>
+    const actionCodeSettings = {
+      // URL you want to redirect back to. The domain (www.example.com) for this
+      // URL must be whitelisted in the Firebase Console.
+      url: 'https://x-monsters.firebaseapp.com',
+      // url: 'https://www.example.com/finishSignUp?cartId=1234',
+      // This must be true.
+      handleCodeInApp: true,
+    };
+
+    const login = function(email) {
+      firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
+        .then(function() {
+          // The link was successfully sent. Inform the user.
+          // Save the email locally so you don't need to ask the user for it again
+          // if they open the link on the same device.
+          window.localStorage.setItem('emailForSignIn', email);
+        })
+        .catch(function(error) {
+          // Some error occurred, you can inspect the code: error.code
+        });
+    };
+    </script>
+
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
