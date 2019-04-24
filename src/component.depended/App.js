@@ -6,7 +6,7 @@ import GridListWithTitlebars from './GridListWithTitlebars';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="App">
         <GridListWithTitlebars />
       </div>
     );
