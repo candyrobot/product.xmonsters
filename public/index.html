@@ -22,7 +22,7 @@
         storageBucket: "x-monsters.appspot.com",
         messagingSenderId: "522942689753"
       };
-      firebase.initializeApp(config);
+      const firebaseApp = firebase.initializeApp(config);
     </script>
     <script>
     const actionCodeSettings = {
@@ -67,6 +67,25 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="contents"></div>
+    <div id="fooo"></div>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script> -->
+    <script src="https://unpkg.com/flamelink/dist/flamelink.js"></script>
+
+    <script>
+      const app = flamelink({ firebaseApp });
+      app.content.get('itemPosts')
+      .then(posts => {
+        Object.keys(posts).forEach(function(data) {
+
+              contents.innerHTML += posts[data].title + posts[data].content + '<hr>';
+
+        })
+      })
+    </script>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
