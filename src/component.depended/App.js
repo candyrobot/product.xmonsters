@@ -1,16 +1,29 @@
-import React, { Component } from 'react';
-import ReactList from 'react-list';
+import React from 'react';
+import { makeStyles } from '@material-ui/styles';
 import './App.css';
 import GridListWithTitlebars from './GridListWithTitlebars';
+import CardThumbnail from './CardThumbnail';
+import Container from '@material-ui/core/Container';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <GridListWithTitlebars />
-      </div>
-    );
-  }
+const useStyles = makeStyles({
+  CardThumbnail: {
+    margin: 5
+  },
+});
+
+function App() {
+  const classes = useStyles();
+  
+  return (
+    <div className="App">
+      <Container>
+        <CardThumbnail className={classes.CardThumbnail} />
+        <CardThumbnail className={classes.CardThumbnail} />
+        <CardThumbnail className={classes.CardThumbnail} />
+        <CardThumbnail className={classes.CardThumbnail} />
+      </Container>
+    </div>
+  );
 }
 
 export default App;

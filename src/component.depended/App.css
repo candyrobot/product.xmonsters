@@ -1,7 +1,14 @@
-
+/*
 body {
   background: linear-gradient(45deg, rgba(109,0,25,1) 0%,rgba(143,2,34,1) 56%,rgba(169,3,41,1) 100%);
 }
 
 .App {
 }
+*/
+
+body {
+	border-top: 5px solid #f6008b;
+	background-color: #222;
+}
+
