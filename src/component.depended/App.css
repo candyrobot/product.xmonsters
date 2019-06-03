@@ -12,3 +12,19 @@ body {
 	background-color: #222;
 }
 
+.CardThumbnail {
+	margin-right: 5px;
+}
+
+.scroll {
+	display: flex;
+	flex-wrap: nowrap;
+	padding: 10px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+.scroll > * {
+	flex-shrink: 0;
+}

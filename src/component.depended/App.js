@@ -66,11 +66,11 @@ function App() {
         </GridList>
       </div>
 
-      <div>
-        <CardThumbnail className={style.CardThumbnail} />
-        <CardThumbnail className={style.CardThumbnail} />
-        <CardThumbnail className={style.CardThumbnail} />
-        <CardThumbnail className={style.CardThumbnail} />
+      <div className="scroll">
+        <CardThumbnail />
+        <CardThumbnail />
+        <CardThumbnail />
+        <CardThumbnail />
       </div>
     </div>
   );
