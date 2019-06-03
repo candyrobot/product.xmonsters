@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: '75vw',
+    // maxWidth: '75vw',
     backgroundColor: 'rgba(255,255,255,.1) !important'
   },
   media: {
