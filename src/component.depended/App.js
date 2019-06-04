@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import style from './App.css';
 import GridListWithTitlebars from './GridListWithTitlebars';
 import CardThumbnail from './CardThumbnail';
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: theme.palette.background.paper,
   },
   gridList: {
+    width: '100%',
     flexWrap: 'nowrap',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
@@ -52,7 +53,7 @@ function App() {
       author: 'author',
     },
   ];
-  
+
   return (
     <div className="App">
       <div className={classes.root}>
@@ -66,12 +67,7 @@ function App() {
         </GridList>
       </div>
 
-      <div className="scroll">
-        <CardThumbnail />
-        <CardThumbnail />
-        <CardThumbnail />
-        <CardThumbnail />
-      </div>
+      <h1>hoge</h1>
     </div>
   );
 }
