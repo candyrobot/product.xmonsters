@@ -16,6 +16,13 @@ body {
 	margin-right: 5px;
 }
 
+.DetailExpression {
+  color: white;
+}
+.DetailExpression .content {
+  padding: 10px;
+}
+
 .scroll {
 	display: flex;
 	flex-wrap: nowrap;
@@ -27,4 +34,17 @@ body {
 
 .scroll > * {
 	flex-shrink: 0;
+}
+
+.BundleBox {
+  /*background-color: rgba(0,0,0,.25);*/
+  /*margin-bottom: 10px;*/
+}
+.BundleBox h5 {
+  width: 100%;
+  padding: 0 3px 10px;
+  margin: 0;
+  /*padding: 5px 10px 0;*/
+  color: white;
+  font-weight: normal;
 }
