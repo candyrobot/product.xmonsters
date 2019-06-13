@@ -8,7 +8,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import { items } from '../object/data';
 
-// 5: url to gumroad
+// 8: url to gumroad
 // 11: title
 // 12: desc
 // 15: thumb
@@ -49,15 +49,14 @@ const useStyles = makeStyles(theme => ({
 
 function App() {
   const classes = useStyles();
-
   const filteredItems = items.filter((data)=> !!data[15]);
 
   return (
     <div className="App">
       {filteredItems.map((data)=>
-        <div style={{ margin: 10 }}>
+        <a href={data[8]} style={{ display: 'block', margin: 10 }} key={data[0]}>
           <CardThumbnail data={data} />
-        </div>
+        </a>
       )}
     </div>
   );
