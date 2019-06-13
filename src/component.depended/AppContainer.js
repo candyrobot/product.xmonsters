@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import App from './App';
+import App from './AppTmp.js';
 import Item from './Item';
 
 const AppContainer = (props) => (
