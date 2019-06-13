@@ -70,9 +70,15 @@ function App() {
         ボリューム満点の写真集！<br />
         今だけ3000円均一で販売中！<br />
         月の食費の1/10以下!!
+        <small>
+          現在クレジットカード、銀行振込でのみ対応しています。<br />
+          銀行振込の場合はLINEにてお問い合わせください。<br />
+          <a href="http://nav.cx/iy1OgQS">
+            <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0" /></a>
+        </small>
       </p>
       {filteredItems.map((data)=>
-        <a href={data[8]} className="AppA" style={{ display: 'block', margin: 10 }} key={data[0]}>
+        <a href={'https://gumroad.com/muscularasianjp'} className="AppA" style={{ display: 'block', margin: 10 }} key={data[0]}>
           <CardThumbnail data={data} />
           <div className="flex">
             <div className="flexGrow">

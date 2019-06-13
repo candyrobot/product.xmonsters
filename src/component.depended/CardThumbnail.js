@@ -52,7 +52,8 @@ function MediaCard(props) {
         />
         <CardContent className={classes.titleBar}>
           <p className={classes.typography}>
-            ちび介: {data[11]}
+            {/* ● ちび介: */}
+            {data[11]}
           </p>
           <p className={classes.typography2}>
             {data[12]}

@@ -8,13 +8,26 @@ body {
 */
 
 body {
-	border-top: 5px solid #f6008b;
+	/*border-top: 5px solid #f6008b;*/
 	/*background-color: #222;*/
   background-color: #eaeaea;
+  position: relative;
   color: #484848;
+}
+body:after {
+  content: '';
+  background-image: url(https://assets.gumroad.com/assets/header_bar-bd3be3db872f96368507899b9f29f6e4acdd64c84dfc132c2f7366924c900b52.png);
+  background-size: contain;
+  background-position: top center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 5px;
 }
 
 h1 {
+  padding-top: 15px;
     margin: 0px 10px -15px;
     text-shadow: 1px 2px 1px rgba(0,0,0,.3);
     font-size: 60px;
@@ -25,6 +38,12 @@ h1 + p {
   font-size: 13px;
   text-align: center;
   font-weight: bold;
+}
+h1 + p small {
+      display: block;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 10px 0 20px;
 }
 
 .AppA {
