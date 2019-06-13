@@ -53,6 +53,11 @@ function App() {
 
   return (
     <div className="App">
+      <h1>枚数増量！！</h1>
+      <p>
+        ボリューム満点の写真集！<br />
+        今だけ3000円均一で販売中！
+      </p>
       {filteredItems.map((data)=>
         <a href={data[8]} style={{ display: 'block', margin: 10 }} key={data[0]}>
           <CardThumbnail data={data} />
