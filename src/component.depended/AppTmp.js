@@ -80,7 +80,7 @@ function App() {
             </div>
             購入者数: {data[20].split(', ')[1]}
             　
-            ♥ {data[20].split(', ')[2]}
+            <i class="fas fa-heart"></i> {data[20].split(', ')[2]}
           </div>
         </a>
       )}
