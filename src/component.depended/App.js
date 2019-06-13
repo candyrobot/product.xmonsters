@@ -43,8 +43,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function App() {
+function App(props) {
   const classes = useStyles();
+
+
+  console.log(props);
+
+
   const tileData = [
     {
       img: 'https://s3-ap-northeast-1.amazonaws.com/stores-files/ji-han-ki/39d70ad2f7a22608746e.png',

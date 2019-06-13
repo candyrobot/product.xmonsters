@@ -7,7 +7,6 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
-import { photoSets } from '../object/data';
 
 const styles = theme => ({
   root: {
@@ -35,20 +34,7 @@ function TitlebarGridList(props) {
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <ListSubheader component="div">December</ListSubheader>
         </GridListTile>
-        {photoSets.map(tile => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
-              actionIcon={
-                <IconButton className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
-          </GridListTile>
-        ))}
+
       </GridList>
     </div>
   );
@@ -59,3 +45,20 @@ TitlebarGridList.propTypes = {
 };
 
 export default withStyles(styles)(TitlebarGridList);
+
+
+
+        // {photoSets.map(tile => (
+        //   <GridListTile key={tile.img}>
+        //     <img src={tile.img} alt={tile.title} />
+        //     <GridListTileBar
+        //       title={tile.title}
+        //       subtitle={<span>by: {tile.author}</span>}
+        //       actionIcon={
+        //         <IconButton className={classes.icon}>
+        //           <InfoIcon />
+        //         </IconButton>
+        //       }
+        //     />
+        //   </GridListTile>
+        // ))}
