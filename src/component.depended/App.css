@@ -11,10 +11,11 @@ body {
 	border-top: 5px solid #f6008b;
 	/*background-color: #222;*/
   background-color: #eaeaea;
+  color: #484848;
 }
 
 h1 {
-    margin: 0px 10px -18px;
+    margin: 0px 10px -15px;
     text-shadow: 1px 2px 1px rgba(0,0,0,.3);
     font-size: 60px;
     text-align: center;
@@ -23,7 +24,23 @@ h1 + p {
   margin: 10px 10px 13px;
   font-size: 13px;
   text-align: center;
+  font-weight: bold;
 }
+
+.AppA {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  margin: 5px;
+  font-size: 13px;
+}
+.flexGrow {
+  flex-grow: 1;
+}
+
 
 .CardThumbnail {
 	margin-right: 5px;
