@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>枚数増量！！</h1>
+      <h1>枚数増量!!</h1>
       <p>
         ボリューム満点の写真集！<br />
         今だけ3000円均一で販売中！
