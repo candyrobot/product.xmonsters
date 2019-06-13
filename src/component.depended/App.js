@@ -1,13 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
+import { Link } from 'react-router-dom';
 import './App.css';
-import GridListWithTitlebars from './GridListWithTitlebars';
 import CardThumbnail from './CardThumbnail';
-// import Container from '@material-ui/core/Container';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
+import GridListWithTitlebars from './GridListWithTitlebars';
+// import Container from '@material-ui/core/Container';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   CardThumbnail: {
@@ -70,79 +70,33 @@ function App(props) {
 
   return (
     <div className="App">
-      <div className="DetailExpression">
-        <CardThumbnail />
-        <div className="content">
-          <h5>Title</h5>
-          <p>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-          <p>¥ 3,000</p>
-          <Button>カートへ</Button>
-        </div>
-      </div>
-
-      <div className={classes.root + ' BundleBox'}>
-        <h5>おすすめ</h5>
-        <GridList className={classes.gridList} cols={2.1}>
-          {tileData.map(tile => (
-            <GridListTile key={tile.img} className={classes.GridListTile}>
-              <CardThumbnail />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
-
-      {/* 一覧: */}
 
       <div className={classes.root}>
         <GridList className={classes.gridList} cols={1.1}>
-          {tileData.map(tile => (
+          {window.tileData.map(tile => (
             <GridListTile key={tile.img} className={classes.GridListTile}>
-              <CardThumbnail />
+              <Link to={`/items/${tile.id}`}>
+                <CardThumbnail />
+              </Link>
             </GridListTile>
           ))}
         </GridList>
       </div>
 
-      <div className={classes.root + ' BundleBox'}>
-        <h5>hoge</h5>
-        <GridList className={classes.gridList} cols={2.1}>
-          {tileData.map(tile => (
-            <GridListTile key={tile.img} className={classes.GridListTile}>
-              <CardThumbnail />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
-      <div className={classes.root + ' BundleBox'}>
-        <h5>hoge</h5>
-        <GridList className={classes.gridList} cols={2.1}>
-          {tileData.map(tile => (
-            <GridListTile key={tile.img} className={classes.GridListTile}>
-              <CardThumbnail />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
-      <div className={classes.root + ' BundleBox'}>
-        <h5>hoge</h5>
-        <GridList className={classes.gridList} cols={2.1}>
-          {tileData.map(tile => (
-            <GridListTile key={tile.img} className={classes.GridListTile}>
-              <CardThumbnail />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
-      <div className={classes.root + ' BundleBox'}>
-        <h5>hoge</h5>
-        <GridList className={classes.gridList} cols={2.1}>
-          {tileData.map(tile => (
-            <GridListTile key={tile.img} className={classes.GridListTile}>
-              <CardThumbnail />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
+      {[0,1,2,3].map(() =>
+        <div className={classes.root + ' BundleBox'}>
+          <h5>hoge</h5>
+          <GridList className={classes.gridList} cols={2.1}>
+            {window.tileData.map(tile => (
+              <GridListTile key={tile.img} className={classes.GridListTile}>
+                <Link to={`/items/${tile.id}`}>
+                  <CardThumbnail />
+                </Link>
+              </GridListTile>
+            ))}
+          </GridList>
+        </div>
+      )}
     </div>
   );
 }
