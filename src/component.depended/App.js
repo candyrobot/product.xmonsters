@@ -5,7 +5,6 @@ import './App.css';
 import CardThumbnail from './CardThumbnail';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import GridListWithTitlebars from './GridListWithTitlebars';
 // import Container from '@material-ui/core/Container';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 
