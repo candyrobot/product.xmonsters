@@ -85,15 +85,15 @@
     <script src="https://unpkg.com/flamelink/dist/flamelink.js"></script>
 
     <script>
-      const app = flamelink({ firebaseApp });
-      app.content.get('itemPosts')
-      .then(posts => {
-        Object.keys(posts).forEach(function(data) {
+      // const app = flamelink({ firebaseApp });
+      // app.content.get('itemPosts')
+      // .then(posts => {
+      //   Object.keys(posts).forEach(function(data) {
 
-              contents.innerHTML += posts[data].title + posts[data].content + '<hr>';
+      //         contents.innerHTML += posts[data].title + posts[data].content + '<hr>';
 
-        })
-      })
+      //   })
+      // })
     </script>
 
     <div id="root"></div>

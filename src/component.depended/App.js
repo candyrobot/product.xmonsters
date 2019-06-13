@@ -5,8 +5,13 @@ import './App.css';
 import CardThumbnail from './CardThumbnail';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-// import Container from '@material-ui/core/Container';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
+import { items } from '../object/data';
+
+// 5: url to gumroad
+// 11: title
+// 12: desc
+// 15: thumb
 
 const useStyles = makeStyles(theme => ({
   CardThumbnail: {
@@ -42,54 +47,34 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function App(props) {
+function App() {
   const classes = useStyles();
 
-
-  console.log(props);
-
-
-  const tileData = [
-    {
-      img: 'https://s3-ap-northeast-1.amazonaws.com/stores-files/ji-han-ki/39d70ad2f7a22608746e.png',
-      title: 'Image',
-      author: 'author',
-    },
-    {
-      img: 'https://s3-ap-northeast-1.amazonaws.com/stores-files/ji-han-ki/39d70ad2f7a22608746e.png',
-      title: 'Image',
-      author: 'author',
-    },
-    {
-      img: 'https://s3-ap-northeast-1.amazonaws.com/stores-files/ji-han-ki/39d70ad2f7a22608746e.png',
-      title: 'Image',
-      author: 'author',
-    },
-  ];
+  const filteredItems = items.filter((data)=> !!data[15]);
 
   return (
     <div className="App">
 
       <div className={classes.root}>
         <GridList className={classes.gridList} cols={1.1}>
-          {window.tileData.map(tile => (
-            <GridListTile key={tile.img} className={classes.GridListTile}>
-              <Link to={`/items/${tile.id}`}>
-                <CardThumbnail />
+          {filteredItems.map(data => (
+            <GridListTile key={data[0]} className={classes.GridListTile}>
+              <Link to={`/items/${data[0]}`}>
+                <CardThumbnail data={data} />
               </Link>
             </GridListTile>
           ))}
         </GridList>
       </div>
 
-      {[0,1,2,3].map(() =>
-        <div className={classes.root + ' BundleBox'}>
+      {[0,1,2,3].map((v) =>
+        <div className={classes.root + ' BundleBox'} key={v}>
           <h5>hoge</h5>
           <GridList className={classes.gridList} cols={2.1}>
-            {window.tileData.map(tile => (
-              <GridListTile key={tile.img} className={classes.GridListTile}>
-                <Link to={`/items/${tile.id}`}>
-                  <CardThumbnail />
+            {filteredItems.map(data => (
+              <GridListTile key={data[0]} className={classes.GridListTile}>
+                <Link to={`/items/${data[0]}`}>
+                  <CardThumbnail data={data} />
                 </Link>
               </GridListTile>
             ))}

@@ -19,7 +19,8 @@ const useStyles = makeStyles({
   typography: {
     color: 'white',
     fontWeight: 'bold',
-    margin: 0
+    margin: 0,
+    whiteSpace: 'nowrap'
   },
   typography2: {
     color: 'rgba(255,255,255,.5)',
@@ -40,21 +41,21 @@ const useStyles = makeStyles({
 
 function MediaCard(props) {
   const classes = useStyles();
+  const { data } = props;
 
   return (
     <Card className={props.className + ' ' + classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://s3-ap-northeast-1.amazonaws.com/stores-files/ji-han-ki/39d70ad2f7a22608746e.png"
+          image={data[15] || 'https://s3-ap-northeast-1.amazonaws.com/stores-files/ji-han-ki/39d70ad2f7a22608746e.png'}
         />
         <CardContent className={classes.titleBar}>
           <p className={classes.typography}>
-            ○ モデル名
+            ちび介: {data[11]}
           </p>
           <p className={classes.typography2}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {data[12]}
           </p>
         </CardContent>
       </CardActionArea>
